@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+    <div id="alert1" class="alert alert-success  fade in" style="display:none;">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+    <div id="alert2" class="alert alert-info" style="display:none;">
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+        <button id="close2" type="button" class="close">×</button>
+    </div>
+
+    <button id="btn1" class="btn btn-default">data-dismiss="alert"</button>
+    <button id="btn2" class="btn btn-default">fadeIn_fadeOut</button>
+
+   </div>
+   <script>
+   $(function(){
+   		$('#btn1').click(function () {
+                $('#alert1').css("display", "block");
+                //alert('Alert');
+         });
+		 $('#btn2').click(function () {
+			    $('#alert2').fadeIn('slow');
+                //$('#alert2').css("display", "block");
+				
+         });
+		  $('#close2').click(function () {
+			    $('#alert2').fadeOut('slow');
+                //$("#alert2").css("display", "none");
+          });
+   });
+   </script>
+</body>
+</html>
+
+

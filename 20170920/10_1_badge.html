@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+	<a href="#">News <span class="badge">5</span></a><br>
+    <br />
+    <button type="button" class="btn btn-primary">Primary <span id="badge1" class="badge">7</span></button>
+     <br/><br/><br/><br/>
+	  <button id='btn1' type="button" class="btn btn-danger">Addbadge</button>
+
+   </div>
+   <script>
+   $(function(){
+   		$('#btn1').click(function () {
+ 				var count = parseInt($("#badge1").text());
+                count += 1;
+                $("#badge1").text(count);
+         });
+
+   });
+   </script>
+</body>
+</html>
+
+

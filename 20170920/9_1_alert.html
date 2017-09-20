@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+    <div id="alert1" class="alert alert-success" style="display:none;">
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+    <div id="alert2" class="alert alert-info" style="display:none;">
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+    </div>
+
+    <div id="alert3" class="alert alert-warning" style="display:none;">
+        <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>
+
+    <div id="alert4" class="alert alert-danger" style="display:none;">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <button id="btn1" class="btn btn-default">alert-success</button>
+    <button id="btn2" class="btn btn-default">alert-info</button>
+    <button id="btn3" class="btn btn-default">alert-warning</button>
+    <button id="btn4" class="btn btn-default">alert-danger</button>
+   </div>
+   <script>
+   $(function(){
+   		$('#btn1').click(function () {
+                $('#alert1').css("display", "block");
+                //alert('Alert');
+         });
+		 $('#btn2').click(function () {
+                $('#alert2').css("display", "block");
+                //alert('Alert');
+         });
+		 $('#btn3').click(function () {
+                $('#alert3').css("display", "block");
+                //alert('Alert');
+         });
+		 $('#btn4').click(function () {
+                $('#alert4').css("display", "block");
+                //alert('Alert');
+         });
+   });
+   </script>
+</body>
+</html>
+
+

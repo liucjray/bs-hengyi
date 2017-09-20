@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+	<div id="alert1" class="alert alert-warning">
+        <button id="close3" type="button" class="close">×</button>
+        <button id="msgbtn" type="button" class="btn btn-primary"> Message <span id="badge1" class="badge">0</span></button>
+        <div class="message" style="display:none;">
+
+        </div>
+         
+    </div>
+     <br/><br/><br/><br/>
+	  <button id='btn1' type="button" class="btn btn-danger">Addbadge</button>
+
+   </div>
+   <script>
+   $(function(){
+   		$('#btn1').click(function () {
+ 				var count = parseInt($("#badge1").text());
+                count += 1;
+                $("#badge1").text(count);
+				if (count==1)
+				{
+					$('#alert1').fadeIn('slow');
+				}
+				$('.message').fadeIn('slow');
+                $(".message").append('<div>' + new Date() + '</div>');
+         });
+		  $('#msgbtn').click(function () {
+                $('#badge1').text(0);
+                $(".message>div").remove();
+            });
+ 			$('#close3').click(function () {
+                $('#badge1').text(0);
+                $('.message>div').remove();
+                $('#alert1').fadeOut('slow');
+            });
+   });
+   </script>
+</body>
+</html>
+
+

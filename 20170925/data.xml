@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<websites>
+  <website url="http://www.apple.com">    
+    <name>Apple</name>   
+  </website>
+  <website url="http://www.google.com">    
+    <name>Google</name>    
+  </website>
+  <website url="http://www.youtube.com">    
+    <name>YouTube</name>    
+  </website>
+</websites>

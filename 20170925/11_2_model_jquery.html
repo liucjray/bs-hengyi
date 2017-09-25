@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+     <style>
+.modal-header {
+  background-color: #2C03F7;
+  color:#FBF7F7;
+}
+
+	</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+
+	  <button class="btn btn-primary" id="button1">Button</button>
+      
+      
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        	<div class="modal-content">
+            	<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+                	<h4 class="modal-title">新聞快報-眼睛過勞誘發肩頸痠痛！眼科醫：按4處一次舒緩</h4> 
+                </div>
+                <div class="modal-body">
+                	<p>【早安健康／陳建甫編譯】每天上班都要盯著報表，下班又忙著追劇？每天長時間面對著電腦、電視以及智慧型手機的螢幕，長期下來可能會讓眼睛過勞造成慢性傷害，甚至還有病變以及失明的可能。而日本眼科醫師也提醒，即便只是輕度的眼部疲勞也不能輕忽，其實眼部疲勞與上半身血液循環有相當大的關連，所以就算每天都有定時望遠凝視、點眼藥水，眼部只要發痠都可能是肩頸痠痛的前兆。</p>
+                	<p>手機、電腦的藍光、紫外線可直達視網膜<br/>眼科醫師井上佐智子表示，人在清醒時會無意識地不斷使用眼睛，事實上流向頭部的血液有極大部份都是用來供給眼部及腦部營養，供應它們在日常生活中能夠正常運作的。但是3C產品的LED螢幕所釋放出的光線大多含有紫外線與藍光等短波長強光，它們在通過眼球時不會受到角膜及水晶體的吸收，能直達視網膜而傷及中心的黃斑部，長期下來就會使得視力退化而造成黃斑部病變。</p>
+                </div>
+                <div class="modal-footer">
+                	<button id="button2" type="button" class="btn btn-success" >Close</button>
+                </div>
+            </div>
+        </div>
+</div>
+<script>
+	$(function(){
+		$('#button1').on('click',function(){
+			 //do something
+			 $("#myModal").modal();
+		});
+		$('#button2').on('click',function(){
+			$("#myModal .modal-body").html('<p> kelly kuso tabero</p>');
+			 $("#myModal").modal('hide');
+			 //do something
+		});
+	});
+</script>
+</body>
+</html>

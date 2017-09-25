@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+	 <ul class="list-group">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+    </ul>
+
+    <ul class="list-group">
+        <li class="list-group-item"><span class="badge">12</span> New</li>
+        <li class="list-group-item"><span class="badge">5</span> Deleted</li>
+        <li class="list-group-item"><span class="badge">3</span> Warnings</li>
+    </ul>
+
+    <div class="list-group">
+        <a id="item1" href="http://apple.com" class="list-group-item">Apple.com</a>
+        <a id="item2" href="http://google.com" class="list-group-item">google.com</a>
+        <a id="item3" href="http://yutube.com" class="list-group-item">yutube.com</a>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">First item</li>
+        <li class="list-group-item list-group-item-info">Second item</li>
+        <li class="list-group-item list-group-item-warning">Third item</li>
+        <li class="list-group-item list-group-item-danger">Fourth item</li>
+    </ul>
+   </div>
+   <script>
+   $(function(){
+   
+		$.ajax({
+		  type: 'get',
+		  url: "11_1_model"
+		}).success(function(data) {
+		  console.log(data);
+		});
+   
+   		$('#item1').addClass('active');
+		$('#item3').addClass('disabled');
+   });
+   </script>
+</body>
+</html>
+
+

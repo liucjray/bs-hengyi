@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+    <div class="list-group" id="group">
+        <!--a id="item1" href="http://apple.com" class="list-group-item">Apple.com</a-->
+      
+    </div>
+
+   </div>
+   <script>
+   $(function(){
+
+	    $.ajax({
+            url: "data.xml",
+            success: function (data) {
+              console.log(data);
+			  $(data).find('website').each(function(i,e) {
+               	console.log($(this).find("name").text());
+                console.log($(this).attr("url")); 
+				$('<a>').attr('href',$(this).attr("url")).text($(this).find("name").text()).addClass('list-group-item').attr('id',"item"+i).appendTo('#group');
+               });
+            }
+		});
+	
+   		$('#item0').addClass('active');
+		$('#item2').addClass('disabled');
+   });
+   </script>
+</body>
+</html>
+
+

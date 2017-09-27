@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"-->
+<title>無標題文件</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<style>
+        .progress.active .progress-bar {
+            -webkit-transition: none !important;
+            transition: none !important;
+        }
+    </style>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+	    <div class="col-xs-12 col-sm-12 progress-container">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" style="width:0%">
+            </div>
+            0%
+        </div>
+    </div>
+
+   </div>
+   <script>
+   $(function(){
+   		
+		$(".progress-bar").animate({
+						width: "100%"
+					}, 3000).attr('aria-valuenow','100').text('100%');
+		   });
+   </script>
+</body>
+</html>
+
+
